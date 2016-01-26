@@ -1,0 +1,40 @@
+#! /bin/sh
+
+#Paths to planner components
+TRANSLATE="./translate/translate.py"
+PREPROCESS="./preprocess/preprocess"
+MOVE="cp"
+SEARCH="./search/search"
+
+#$3 is the file for plan
+run_planner(){
+	echo "1. Running translator"
+	"$TRANSLATE" "$1" "$2" > output.sas
+	echo "2. Running preprocess"
+	"$PREPROCESS" < output.sas > output
+	echo "3. Move the all.groups to search"
+	"$MOVE" "all.groups" "./search/all.groups"
+	echo "4. Running search"
+	"$SEARCH" "3" "gpPn3" "$3" < output
+}
+
+check_input_files(){
+	if [ ! -e "$1" ]; then
+		echo "Domain file \"$1\" does not exist."
+		exit 1
+	fi
+	if [ ! -e "$2" ]; then
+		echo "Problem file \"$2\" does not exist."
+		exit 1
+	fi
+}
+#Make sure we have exactly 6 command line arguments
+if [ $# != 3 ]; then
+	echo "Usage:  \"myplan <domain_file> <problem_file> <plan_file>\""
+	exit 1
+fi
+
+check_input_files "$1" "$2"
+
+#Command line arguments seem to be fine, then we start run_planner
+run_planner "$1" "$2" "$3"

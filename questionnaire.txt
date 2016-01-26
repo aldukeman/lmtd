@@ -1,0 +1,42 @@
+= PDDL support questionnaire =
+
+== General questions ==
+
+ * Name of planner: [LMTD]
+ * Names of team members: [Yanmei Hu(huym260@gmail.com),Dunbo Cai(dunbocai@gmail.com),Minghao Yin(ymh@nenu.edu.cn)]
+ 
+== Tracks ==
+
+The planner is entered in the following '''tracks''' (please remove all options that don't apply; multiple answers possible):
+
+ * [The planner is entered in the temporal satisficing track.]
+
+== Features ==
+
+The planner supports '''object fluents''' in the following way (please remove all options apart from the one that applies):
+   
+ * [The planner only supports predicate representations, no object fluent representations.] 
+
+
+The planner supports '''PDDL types''' in the following way (please remove all options apart from the one that applies):
+
+ * [The planner only supports typed representations, no untyped representations.]
+
+The planner supports '''grounded representations''' in the following way (please remove all options apart from the one that applies):
+
+ * [The planner only supports representations with schematic operators, no grounded representations.]
+
+The planner supports the following '''optional features''' (please remove all options that don't apply; multiple answers possible):
+
+ * [The planner supports general ADL conditions ({{{exists}}}, {{{forall}}}, {{{or}}}, ...) in operators]
+ * [The planner supports conditional effects ({{{when}}}) in operators.]
+ * [The planner supports universal effects ({{{forall}}}) in operators.]
+
+The planner supports '''numeric state variables''' in the following way (please remove the one that doesn't apply):
+
+ * [Numeric state variables are supported.]
+
+
+The planner supports '''temporal planning''' in the following way (please remove all options apart from the one that applies):
+
+ * [Durative actions are supported, but timed initial literals are not.]

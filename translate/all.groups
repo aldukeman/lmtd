@@ -1,0 +1,34 @@
+begin_groups
+8
+group
+3
+0 1 at 2 <hoist0> <depot0-1-1> 
+0 0 at 2 <hoist0> <container-0-0> 
+0 2 at 2 <hoist0> <loadarea> 
+group
+1
+6 0 in 2 <container-0-0> <container0> 
+group
+3
+2 0 in 2 <crate0> <container0> 
+2 1 in 2 <crate0> <depot0> 
+1 0 lifting 2 <hoist0> <crate0> 
+group
+1
+7 0 in 2 <depot0-1-1> <depot0> 
+group
+2
+1 0 lifting 2 <hoist0> <crate0> 
+3 0 available 1 <hoist0> 
+group
+3
+1 2 on 2 <crate0> <depot0-1-1> 
+1 1 on 2 <crate0> <container-0-0> 
+1 0 lifting 2 <hoist0> <crate0> 
+group
+1
+4 0 clear 1 <container-0-0> 
+group
+1
+5 0 clear 1 <depot0-1-1> 
+end_groups

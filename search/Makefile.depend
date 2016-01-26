@@ -1,0 +1,100 @@
+planner.o: planner.cc best_first_search.h closed_list.h operator.h \
+  axioms.h globals.h causal_graph.h state.h search_engine.h \
+  pc_heuristic.h heuristic.h domain_transition_graph.h no_heuristic.h \
+  partial_order_lifter.h scheduler.h monitoring.h
+heuristic.o: heuristic.cc heuristic.h operator.h axioms.h globals.h \
+  causal_graph.h state.h
+ff_heuristic.o: ff_heuristic.cc ff_heuristic.h heuristic.h globals.h \
+  causal_graph.h landmarks_types.h operator.h axioms.h state.h
+pc_heuristic.o: pc_heuristic.cc pc_heuristic.h heuristic.h state.h \
+  globals.h causal_graph.h domain_transition_graph.h operator.h axioms.h \
+  landmarks_graph.h landmarks_types.h pc_graph.h \
+  landmarks_graph_rpg_sasp.h
+no_heuristic.o: no_heuristic.cc no_heuristic.h heuristic.h globals.h \
+  causal_graph.h operator.h axioms.h state.h
+domain_transition_graph.o: domain_transition_graph.cc \
+  domain_transition_graph.h operator.h axioms.h globals.h causal_graph.h \
+  state.h
+globals.o: globals.cc globals.h causal_graph.h axioms.h state.h \
+  operator.h cache.h domain_transition_graph.h successor_generator.h \
+  landmarks_graph.h landmarks_types.h landmarks_graph_rpg_sasp.h \
+  pc_graph.h ff_heuristic.h heuristic.h
+operator.o: operator.cc globals.h causal_graph.h operator.h axioms.h \
+  state.h
+state.o: state.cc state.h globals.h causal_graph.h axioms.h operator.h
+successor_generator.o: successor_generator.cc globals.h causal_graph.h \
+  operator.h axioms.h state.h successor_generator.h
+causal_graph.o: causal_graph.cc causal_graph.h globals.h \
+  domain_transition_graph.h operator.h axioms.h state.h
+best_first_search.o: best_first_search.cc best_first_search.h \
+  closed_list.h operator.h axioms.h globals.h causal_graph.h state.h \
+  search_engine.h heuristic.h successor_generator.h
+axioms.o: axioms.cc axioms.h globals.h causal_graph.h state.h operator.h
+cache.o: cache.cc cache.h causal_graph.h globals.h state.h
+search_engine.o: search_engine.cc globals.h causal_graph.h
+closed_list.o: closed_list.cc closed_list.h operator.h axioms.h globals.h \
+  causal_graph.h state.h
+scheduler.o: scheduler.cc scheduler.h globals.h causal_graph.h
+partial_order_lifter.o: partial_order_lifter.cc partial_order_lifter.h \
+  state.h globals.h causal_graph.h operator.h axioms.h scheduler.h
+monitoring.o: monitoring.cc monitoring.h search_engine.h globals.h \
+  causal_graph.h state.h operator.h axioms.h
+landmarks_graph.o: landmarks_graph.cc landmarks_graph.h operator.h \
+  axioms.h globals.h causal_graph.h state.h landmarks_types.h \
+  ff_heuristic.h heuristic.h
+landmarks_graph_rpg_sasp.o: landmarks_graph_rpg_sasp.cc \
+  landmarks_graph_rpg_sasp.h globals.h causal_graph.h landmarks_graph.h \
+  operator.h axioms.h state.h landmarks_types.h domain_transition_graph.h
+pc_graph.o: pc_graph.cc landmarks_graph.h operator.h axioms.h globals.h \
+  causal_graph.h state.h landmarks_types.h landmarks_graph_rpg_sasp.h \
+  pc_graph.h
+planner.profile.o: planner.cc best_first_search.h closed_list.h operator.h \
+  axioms.h globals.h causal_graph.h state.h search_engine.h \
+  pc_heuristic.h heuristic.h domain_transition_graph.h no_heuristic.h \
+  partial_order_lifter.h scheduler.h monitoring.h
+heuristic.profile.o: heuristic.cc heuristic.h operator.h axioms.h globals.h \
+  causal_graph.h state.h
+ff_heuristic.profile.o: ff_heuristic.cc ff_heuristic.h heuristic.h globals.h \
+  causal_graph.h landmarks_types.h operator.h axioms.h state.h
+pc_heuristic.profile.o: pc_heuristic.cc pc_heuristic.h heuristic.h state.h \
+  globals.h causal_graph.h domain_transition_graph.h operator.h axioms.h \
+  landmarks_graph.h landmarks_types.h pc_graph.h \
+  landmarks_graph_rpg_sasp.h
+no_heuristic.profile.o: no_heuristic.cc no_heuristic.h heuristic.h globals.h \
+  causal_graph.h operator.h axioms.h state.h
+domain_transition_graph.profile.o: domain_transition_graph.cc \
+  domain_transition_graph.h operator.h axioms.h globals.h causal_graph.h \
+  state.h
+globals.profile.o: globals.cc globals.h causal_graph.h axioms.h state.h \
+  operator.h cache.h domain_transition_graph.h successor_generator.h \
+  landmarks_graph.h landmarks_types.h landmarks_graph_rpg_sasp.h \
+  pc_graph.h ff_heuristic.h heuristic.h
+operator.profile.o: operator.cc globals.h causal_graph.h operator.h axioms.h \
+  state.h
+state.profile.o: state.cc state.h globals.h causal_graph.h axioms.h operator.h
+successor_generator.profile.o: successor_generator.cc globals.h causal_graph.h \
+  operator.h axioms.h state.h successor_generator.h
+causal_graph.profile.o: causal_graph.cc causal_graph.h globals.h \
+  domain_transition_graph.h operator.h axioms.h state.h
+best_first_search.profile.o: best_first_search.cc best_first_search.h \
+  closed_list.h operator.h axioms.h globals.h causal_graph.h state.h \
+  search_engine.h heuristic.h successor_generator.h
+axioms.profile.o: axioms.cc axioms.h globals.h causal_graph.h state.h operator.h
+cache.profile.o: cache.cc cache.h causal_graph.h globals.h state.h
+search_engine.profile.o: search_engine.cc globals.h causal_graph.h
+closed_list.profile.o: closed_list.cc closed_list.h operator.h axioms.h globals.h \
+  causal_graph.h state.h
+scheduler.profile.o: scheduler.cc scheduler.h globals.h causal_graph.h
+partial_order_lifter.profile.o: partial_order_lifter.cc partial_order_lifter.h \
+  state.h globals.h causal_graph.h operator.h axioms.h scheduler.h
+monitoring.profile.o: monitoring.cc monitoring.h search_engine.h globals.h \
+  causal_graph.h state.h operator.h axioms.h
+landmarks_graph.profile.o: landmarks_graph.cc landmarks_graph.h operator.h \
+  axioms.h globals.h causal_graph.h state.h landmarks_types.h \
+  ff_heuristic.h heuristic.h
+landmarks_graph_rpg_sasp.profile.o: landmarks_graph_rpg_sasp.cc \
+  landmarks_graph_rpg_sasp.h globals.h causal_graph.h landmarks_graph.h \
+  operator.h axioms.h state.h landmarks_types.h domain_transition_graph.h
+pc_graph.profile.o: pc_graph.cc landmarks_graph.h operator.h axioms.h globals.h \
+  causal_graph.h state.h landmarks_types.h landmarks_graph_rpg_sasp.h \
+  pc_graph.h

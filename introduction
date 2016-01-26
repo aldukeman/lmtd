@@ -1,0 +1,16 @@
+translate
+process
+search:
+        1.here we embed the order between com and log, for example, if log appears in the causal parents, then com < log,
+        it means that log's start_val should be obtained in the context of com
+        
+        2.the before graph is new for this version, the pc_graph.cc/pc_graph.h is for our new before graph
+        we cann't handle ooutput14 ie. in woodworking, the bug is in mark_helpful_transitions
+        it loops many times and cann't stop itself, it couldn't find the prefered operators,
+        now we let it at most loops 10 times ,and stop it manually. this need to be handled with.
+        3.this come from search5 in tfd-src-0.2.1_3_2
+        parameter: search 3 t 1800 gpPn3 plan_name < output
+        
+
+
+2011-01-05
