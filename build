@@ -1,10 +1,14 @@
 #! /bin/bash
 
 cd preprocess
-make || exit 1
+mkdir -p obj
+make clean
+make -j 3 || exit 1
 cd ..
 
 cd search
-make || exit 1
+mkdir -p obj
+make clean
+make -j 3 || exit 1
 cd ..
 

@@ -17,8 +17,8 @@ CC_OPTIONS = -ansi -Wall -O2 -Wno-sign-compare -pedantic -Werror -DNDEBUG
 PROFILE_OPTIONS = -pg -O2
 LINK_OPTIONS =
 
-CC = g++
-DEPEND = g++ -MM
+CC = g++ -std=c++11
+DEPEND = g++ -std=c++11 -MM
 
 vpath %.o obj
 

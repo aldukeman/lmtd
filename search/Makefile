@@ -11,9 +11,9 @@ SOURCES = planner.cc $(HEADERS:%.h=%.cc)
 OBJECTS = $(SOURCES:%.cc=%.o)
 PROFILE_OBJECTS = $(SOURCES:%.cc=%.profile.o)
 
-CC = g++
-DEPEND = g++ -MM
-CCOPT = -Wall -W -Wno-sign-compare -ansi -pedantic # -Werror
+CC = g++ -std=c++11
+DEPEND = g++ -std=c++11 -MM
+CCOPT = -g -Wall -W -Wno-sign-compare -ansi -pedantic # -Werror
 LINKOPT =
 
 ## debug, don't optimize
